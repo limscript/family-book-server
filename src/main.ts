@@ -8,6 +8,6 @@ async function bootstrap() {
   app.setGlobalPrefix('api')
   app.useGlobalFilters(new HttpExceptionFilter())
   app.useGlobalInterceptors(new TransformInterceptor())
-  await app.listen(8088);
+  await app.listen(80);
 }
 bootstrap();
