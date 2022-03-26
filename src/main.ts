@@ -5,9 +5,9 @@ import { TransformInterceptor } from './core/interceptor/transform.interceptor';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.setGlobalPrefix('api')
-  app.useGlobalFilters(new HttpExceptionFilter())
-  app.useGlobalInterceptors(new TransformInterceptor())
-  await app.listen(80);
+  app.setGlobalPrefix('api');
+  app.useGlobalFilters(new HttpExceptionFilter());
+  app.useGlobalInterceptors(new TransformInterceptor());
+  await app.listen(3000);
 }
 bootstrap();
